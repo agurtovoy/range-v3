@@ -19,5 +19,4 @@ conan_basic_setup()
 add_executable(example example.cpp)
 
 target_link_libraries(example ${CONAN_LIBS})
-
-target_compile_features(example PRIVATE cxx_range_for)
+set_property(TARGET example PROPERTY CXX_STANDARD 17)
